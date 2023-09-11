@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "62KMCK1IzwLHzfFyVzsm+d8n3lMfzX9I7f66HFGdatI=",
+  "Source": "HotDeskAPI",
+  "BasePath": "_content/HotDeskAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

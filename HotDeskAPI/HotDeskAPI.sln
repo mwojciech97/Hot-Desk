@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotDeskAPI", "HotDeskAPI.csproj", "{89875A74-6D0A-40FD-B309-282868CD27C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\UnitTests.csproj", "{83C06819-DBDA-4488-AAE9-3F37679857EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89875A74-6D0A-40FD-B309-282868CD27C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89875A74-6D0A-40FD-B309-282868CD27C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89875A74-6D0A-40FD-B309-282868CD27C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89875A74-6D0A-40FD-B309-282868CD27C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C06819-DBDA-4488-AAE9-3F37679857EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C06819-DBDA-4488-AAE9-3F37679857EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C06819-DBDA-4488-AAE9-3F37679857EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C06819-DBDA-4488-AAE9-3F37679857EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3681E30A-7CAF-46D8-8B0A-899B48CBB63D}
+	EndGlobalSection
+EndGlobal
