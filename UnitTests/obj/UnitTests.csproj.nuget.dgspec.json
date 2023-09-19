@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\UnitTests\\UnitTests.csproj": {}
+    "C:\\Hot Desk\\UnitTests\\UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\HotDeskAPI\\HotDeskAPI.csproj": {
+    "C:\\Hot Desk\\HotDeskAPI\\HotDeskAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\HotDeskAPI\\HotDeskAPI.csproj",
+        "projectUniqueName": "C:\\Hot Desk\\HotDeskAPI\\HotDeskAPI.csproj",
         "projectName": "HotDeskAPI",
-        "projectPath": "C:\\Repos\\HotDeskAPI\\HotDeskAPI.csproj",
+        "projectPath": "C:\\Hot Desk\\HotDeskAPI\\HotDeskAPI.csproj",
         "packagesPath": "C:\\Users\\wojci\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\HotDeskAPI\\obj\\",
+        "outputPath": "C:\\Hot Desk\\HotDeskAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Repos\\UnitTests\\UnitTests.csproj": {
+    "C:\\Hot Desk\\UnitTests\\UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\UnitTests\\UnitTests.csproj",
+        "projectUniqueName": "C:\\Hot Desk\\UnitTests\\UnitTests.csproj",
         "projectName": "UnitTests",
-        "projectPath": "C:\\Repos\\UnitTests\\UnitTests.csproj",
+        "projectPath": "C:\\Hot Desk\\UnitTests\\UnitTests.csproj",
         "packagesPath": "C:\\Users\\wojci\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\UnitTests\\obj\\",
+        "outputPath": "C:\\Hot Desk\\UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -116,8 +116,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Repos\\HotDeskAPI\\HotDeskAPI.csproj": {
-                "projectPath": "C:\\Repos\\HotDeskAPI\\HotDeskAPI.csproj"
+              "C:\\Hot Desk\\HotDeskAPI\\HotDeskAPI.csproj": {
+                "projectPath": "C:\\Hot Desk\\HotDeskAPI\\HotDeskAPI.csproj"
               }
             }
           }

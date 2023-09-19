@@ -13,10 +13,19 @@ namespace HotDeskAPI.Controllers
         public LocationController(HotDeskDBContext context) => _context = context;
 
         [HttpGet("locations")]
+        [ProducesResponseType(typeof(Location), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get()
         {
-            var locations = await _context.Locations.ToListAsync();
-            return locations == null ? NotFound() : Ok(locations);
+            try
+            {
+                var locations = await _context.Locations.ToListAsync();
+                return locations == null ? NotFound() : Ok(locations);
+            } catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            
         }
         [HttpPost("createlocation")]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -42,18 +51,28 @@ namespace HotDeskAPI.Controllers
             
         }
         [HttpDelete("deletelocation/{locationName}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete(string locationName, User user)
         {
-            var u = await _context.Users.FirstOrDefaultAsync(u => u.Username == user.Username);
-            if (u == null ||
-                u.Password != user.Password ||
-                !u.IsAdmin) return BadRequest("Wrong username or password.");
-            var deleteLocation =  _context.Locations.FirstOrDefault(l => l.LocationName == locationName);
-            if (deleteLocation == null) return NotFound();
-            if (_context.Desks.Any(d => d.Location.LocationName == locationName)) return BadRequest("Cannot delete location as there are still desks in there.");
-            _context.Remove(deleteLocation);
-            await _context.SaveChangesAsync();
-            return NoContent();
+            try
+            {
+                var u = await _context.Users.FirstOrDefaultAsync(u => u.Username == user.Username);
+                if (u == null ||
+                    u.Password != user.Password ||
+                    !u.IsAdmin) return BadRequest("Wrong username or password.");
+                var deleteLocation = _context.Locations.FirstOrDefault(l => l.LocationName == locationName);
+                if (deleteLocation == null) return NotFound();
+                if (_context.Desks.Any(d => d.Location.LocationName == locationName)) return BadRequest("Cannot delete location as there are still desks in there.");
+                _context.Remove(deleteLocation);
+                await _context.SaveChangesAsync();
+                return NoContent();
+            } catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+            
         }
 
     }
